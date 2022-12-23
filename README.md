@@ -1,8 +1,9 @@
 **Babysitting Web Application**
 
 Welcome to the *Nanny Network!* This application allows users to find and connect with babysitters in their local area. <br />
-**Features:**  <br />
-    **Create a profile as a babysitter or parent**  <br />
++**Features:**  <br /><br />
+
+**Create a profile as a babysitter or parent**  <br />
 
 * Search for babysitters by location and availability
 * Contact and book babysitters through the platform
