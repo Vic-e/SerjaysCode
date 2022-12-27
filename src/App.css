@@ -17,11 +17,12 @@ nav {
   
 }
 nav ul {
-  margin-right: 10px;
+  margin-right: 25px;
   display: inline;
   list-style: none;
 
 }
+
 nav .Nav {
   display: flex;
   align-items: center;
@@ -32,15 +33,25 @@ nav .Nav {
 
 body {
     font-family: fredoka one;
+    background-color: #B7E4C7;
+    background-image: url("https://cdn.dribbble.com/users/508588/screenshots/14325060/media/59d42601e5ecdaa11fd61581d9d15777.jpg?compress=1&resize=1600x1200&vertical=top");
+    background-size:cover;
 }
 .SitterIMG {
   width: 500px;
+  height: 500px;
 }
 .Sitter {
   width: 300px;
+  height: 300px;
   border: black 2px solid;
+  margin: 2px;
 }
 .list-img{
   width: 150px;
   height: 150px;
+}
+.size1 {
+  width: 300px;
+  height: 300px;
 }

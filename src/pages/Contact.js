@@ -24,13 +24,13 @@ export default function Contact() {
 
 
       <form action="/">
-        <label for="name">Name:</label>
+        <label name="name">Name:</label>
         <input type="text" id="name" name="name" /> <br></br>
-        <label for="email">Email:</label>
+        <label name="email">Email:</label>
         <input type="text" id="email" name="email" /> <br></br>
-        <label for="phone">Phone:</label>
+        <label name="phone">Phone:</label>
         <input type="text" id="phone" name="phone" /> <br></br>
-        <label for="message">Message:</label>
+        <label name="message">Message:</label>
         <br></br>
         <input type="text" id="message" name="message" /> <br></br>
         <input type="submit" value="Submit" />

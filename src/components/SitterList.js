@@ -1,6 +1,6 @@
 import SitterListItem from "./SitterListItem";
 import SitterData from "../data";
-import { Link } from "react-router-dom";
+
 
 const sitters = SitterData.map((ele, index) => {
   return (
@@ -11,8 +11,8 @@ const sitters = SitterData.map((ele, index) => {
 });
 export default function SitterList(props) {
   return (
-    <div>
-        <section className="lists">{sitters} </section>
+    <div className="size1">
+      {sitters} 
     </div>
   );
 }

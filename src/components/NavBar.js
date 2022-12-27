@@ -4,12 +4,12 @@ export default function NavBar() {
   return (
     <nav className="Nav">
       <ul className="Nav"> 
-        <li><Link to="/" style={{ textDecoration: 'none' }}> Home</Link></li>
-        <li><Link to="/hire" style={{ textDecoration: 'none' }}>Book us</Link></li>
-        <li><Link to="/sitters" style={{ textDecoration: 'none' }}>Sitters</Link></li>
-        <li><Link to="/rates" style={{ textDecoration: 'none' }}>Rates</Link></li>
-        <li><Link to="/contact" style={{ textDecoration: 'none' }}>Contact Us</Link></li>
-        <li><Link to="/about" style={{ textDecoration: 'none' }}>About Us</Link></li>        
+        <li><Link to="/" style={{ textDecoration: 'none', color: 'black' }}> Home</Link></li>
+        <li><Link to="/bookus" style={{ textDecoration: 'none', color: 'black' }}>Book us</Link></li>
+        <li><Link to="/sitters" style={{ textDecoration: 'none', color: 'black' }}>Sitters</Link></li>
+        <li><Link to="/rates" style={{ textDecoration: 'none', color: 'black' }}>Rates</Link></li>
+        <li><Link to="/contact" style={{ textDecoration: 'none', color: 'black' }}>Contact Us</Link></li>
+        <li><Link to="/about" style={{ textDecoration: 'none', color: 'black' }}>About Us</Link></li>        
       </ul>
     </nav>
   );

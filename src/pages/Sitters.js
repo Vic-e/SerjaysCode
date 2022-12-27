@@ -1,11 +1,12 @@
-import React from 'react'
-import SitterList from '../components/SitterList'
+import React from "react";
+import SitterList from "../components/SitterList";
 
 export default function Sitter() {
   return (
     <div>
-      <SitterList />
+      <div>
+        <SitterList />
+      </div>
     </div>
-  )
+  );
 }
-

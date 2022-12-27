@@ -1,60 +1,102 @@
-const React = require("react");
-const DefaultLayout = require("../layout/Default");
+import React, { useState } from "react";
 
-class New extends React.Component {
-  render() {
-    return (
-      <DefaultLayout title="Homepage">
-        <nav>
-          <a href="/hire">Book Us!</a>
-        </nav>
-        {/* NOTE: action will be the route, method will be the HTTP verb */}
-        <form action="/hire" method="POST">
-          Name: <input type="text" name="name" required /> <br />
-          Number of children:{" "}
-          <input
-            type="number"
-            name="numberOfChildren"
-            min={1}
-            max={5}
-            required
-          />{" "}
-          <br />
-          Age of children: <input type="text" name="ageOfChildren" required />
-          <br />
-          Number of hours:{" "}
-          <input
-            type="number"
-            name="numberOfHours"
-            required
-            min={1}
-            max={10}
-          />{" "}
-          <br />
-          <label for="location">Location:</label>
-          <select id="country" name="country">
-            <option value="nyc">NYC, NY</option>
-            <option value="hampton">Hampton, VA</option>
-            <option value="silverSpring">Silver Spring, MD</option>
-            <option value="ohio">Coleman, OH</option>
-          </select>
-          <br />
-          Date:
-          <input
-            type="datetime-local"
-            name="date"
-            min="2023-01-01"
-            required
-          />
-          <input type="submit" value="Create posting" />
-        </form>
-        <p>
-          *IF MORE THAN 10 HOURS NEEDED PLEASE CONTACT US. WE WILL ACCOMMODATE
-          FOR YOU!
-        </p>
-      </DefaultLayout>
-    );
-  }
+function CreatePosting() {
+    const [input, setInput] = useState({
+        parentName: '',
+        contactNumber: '',
+        contactEmail: '',
+        numberOfChildren: '',
+        ageOfChildren: '',
+        date: '',
+        location: 'NYC'
+    })
+
+    function handleChange(event){
+        const {name, value} = event.target;
+        setInput(prevInput => {
+            return {
+                ...prevInput,
+                [name]: value
+            }
+        })
+    }
+
+    function handleClick(event){
+        event.preventDefault();
+        console.log(input)
+
+    }
+
+  return (
+    <div>
+      <form>
+        <h2>Name:</h2>
+        <input
+          onChange={handleChange}
+          name="parentName"
+          value={input.parentName}
+          autoComplete="off"
+          placeholder="Your Name"
+          required="true"
+        />
+        <h2>Phone Number:</h2>
+         <input
+          onChange={handleChange}
+          name="contactNumber"
+          value={input.contactNumber}
+          autoComplete="on"
+          placeholder="Phone Number"
+          required
+        />
+        <h2>Email:</h2>
+         <input
+          onChange={handleChange}
+          name="contactEmail"
+          type="email"
+          value={input.contactEmail}
+          autoComplete="on"
+          placeholder="Email address"
+        />
+        <h2>Number of Children:</h2>
+        <input
+          onChange={handleChange}
+          name="numberOfChildren"
+          type="number"
+          min="1"
+          value={input.numberOfChildren}
+          autoComplete="off"
+          placeholder="Number of Children"
+        />
+        <h2>Age of Children:</h2>
+        <input
+          onChange={handleChange}
+          name="ageOfChildren"
+          min="2023-01-01T00:00"
+          value={input.ageOfChildren}
+          autoComplete="off"
+          placeholder="Age of Children"
+          required
+        />
+        <h2>Date & Time:</h2>
+        <input
+          onChange={handleChange}
+          name="date"
+          type={"datetime-local"}
+          value={input.date}
+          autoComplete="off"
+          placeholder="Date needed"
+        />
+        <h2>Location:</h2>
+        <select name="location"  value={input.location} onChange={handleChange}>
+        <option value="DEFAULT" disabled>Choose a city</option>
+          <option value="NYC">New York City</option>
+          <option value="HVA">Hampton, VA</option>
+          <option value="Coleman">Coleman, Ohio</option>
+        </select> <br /><br />
+        <button onClick={handleClick}>Create Posting</button>
+      </form>
+      <h1>If you have any questions please contact us!</h1>
+    </div>
+  );
 }
-
-module.exports = New;
+export default CreatePosting;
