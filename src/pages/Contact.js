@@ -23,7 +23,7 @@ export default function Contact() {
       </p>
 
 
-      <form action="/">
+      <form>
         <label name="name">Name:</label>
         <input type="text" id="name" name="name" /> <br></br>
         <label name="email">Email:</label>

@@ -86,7 +86,7 @@ export default [
         age: 26,
         gender: 'Female',
         education: 'College degree',
-        interest: [''],
+        interest: ['Coding, Watching movies'],
         available: false
     },
     {

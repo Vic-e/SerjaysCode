@@ -4,10 +4,12 @@ import NavBar from './components/NavBar';
 import About from './pages/About';
 import Rates from './pages/Rates';
 import Home from './pages/Home';
-import Register from './pages/Sitters';
+import Sitters from './pages/Sitters';
 import Contact from './pages/Contact';
 import CreatePosting from './postings/New';
 import SitterPage from './pages/SitterPage';
+import Postings from './pages/Postings';
+
 
 function App() {
   return (
@@ -15,12 +17,13 @@ function App() {
       <NavBar />
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sitters" element={<Register/>} />
+        <Route path="/sitters" element={<Sitters/>} />
         <Route path="/about" element={<About />} />
         <Route path="/rates" element={<Rates />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/bookus" element={<CreatePosting />} />
         <Route path="/sitter/:index" element={<SitterPage />} />
+        <Route path="/postings" element={<Postings />} />
       </Routes>
     </div>
   );

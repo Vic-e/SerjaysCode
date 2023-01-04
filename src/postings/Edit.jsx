@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-
-function CreatePosting() {
-
+function editPosting() {
+  const navigate = useNavigate()
     const [input, setInput] = useState({
         parentName: '',
         contactNumber: '',
@@ -10,7 +10,7 @@ function CreatePosting() {
         numberOfChildren: '',
         ageOfChildren: '',
         date: '',
-        location: 'New York City'
+        location: ''
     })
 
     function handleChange(event){
@@ -30,7 +30,7 @@ function CreatePosting() {
 
   return (
     <div>
-      <form action="/postings" method="POST" >
+      <form action="/postings" method="PUT" >
         <h2>Name:</h2>
         <input
           onChange={handleChange}
@@ -106,4 +106,4 @@ function CreatePosting() {
     </div>
   );
 }
-export default CreatePosting;
+export default editPosting;

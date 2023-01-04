@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.postingBox {
+  text-align: center;
+  background-color: rgb(192, 13, 224);
+  padding-top: 15px;
+  margin: auto;
+  margin-top: 10px;
+  width: 500px;
+  height: 300px;
+  border:black 1px solid;
+  border-radius: 20px;
+}

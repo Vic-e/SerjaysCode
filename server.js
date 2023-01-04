@@ -1,9 +1,13 @@
 const express = require("express");
+const Posts = require("./models/postModel")
 const app = express();
-// const cors = require("cors");
 const mongoose = require("mongoose");
+const methodOverride = require('method-override');
+
+
 // Always require and configure near the top
 require('dotenv').config()
+const postController = require("./controllers/postController")
 
 //// ===== Connection to Database =====
 require("./config/database");
@@ -13,11 +17,25 @@ app.use(express.json());
 mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGO_URI)
 
-const db = mongoose.connection
+app.use(methodOverride("_method")); // override for put and delete requests from forms
+app.use(express.urlencoded({ extended: true })); // parse urlencoded request bodies
+app.use(express.static("public")); // serve files from public statically
 
-db.on('connected', () => {
-  console.log(`Connected to ${db.name} at ${db.host}:${db.port}`)
+
+
+// ===== Middleware =====
+app.use((req, res, next) => {
+  console.log("Im running for all routes")
+  console.log("1. middleware")
+  next()
 })
+
+app.use(express.urlencoded({extended: false}))
+app.use(methodOverride("_method"))
+//   app.use(express.static('public'));
+app.use("/posting", postController);
+
+
 
 
 app.listen(3001, function() {
