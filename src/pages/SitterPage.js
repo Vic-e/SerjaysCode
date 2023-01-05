@@ -9,7 +9,6 @@ export default function SitterPage(props) {
 
   return (
     <div>
-        sitter page
          <div className="EmpHead">
         </div> 
      <img className="SitterIMG" src={SitterData[index].img} alt={SitterData[index].img} />

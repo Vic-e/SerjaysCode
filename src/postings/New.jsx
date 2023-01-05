@@ -29,8 +29,8 @@ function CreatePosting() {
     }
 
   return (
-    <div>
-      <form action="/postings" method="POST" >
+    <div className="create">
+      <form action="/posting" method="POST" >
         <h2>Name:</h2>
         <input
           onChange={handleChange}
@@ -77,7 +77,6 @@ function CreatePosting() {
         <input
           onChange={handleChange}
           name="ageOfChildren"
-          min="2023-01-01T00:00"
           value={input.ageOfChildren}
           autoComplete="off"
           placeholder="Age of Children"

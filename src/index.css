@@ -12,13 +12,49 @@ code {
     monospace;
 }
 .postingBox {
+  
   text-align: center;
-  background-color: rgb(192, 13, 224);
-  padding-top: 15px;
+  align-items: center;
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+  background-size: 500px 355px;
+  background-repeat: no-repeat ;
+  padding-top: 25px;
   margin: auto;
   margin-top: 10px;
   width: 500px;
-  height: 300px;
+  height: 330px;
   border:black 1px solid;
   border-radius: 20px;
+  color: azure;
+}
+.trash {
+  /* width: 25px; */
+  padding: 0px;
+border: none;
+background: none;
+  background-color:rgba(6, 24, 24, 0.424);
+}
+.titleOnPosting {
+  text-align: center;
+}
+
+.edit-delete{
+
+  display: flex;
+  margin-left: 40%;
+}
+.postName {
+  padding-top: 25px;
+}
+.editArea {
+   border: black solid 2px;
+  background-color: rgba(255, 125, 212, 0.417);
+  padding-left: 40%;
+  margin-top: 2000px;
+  margin-bottom: 15rem;
+}
+.update {
+  width: 100%;
+  height: 100%;
+
 }

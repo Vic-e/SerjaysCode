@@ -16,8 +16,8 @@ ul {
 }
 nav {
   width: 100%;
-  background-color: #CDB4DB;
-  
+  background-color: #0000008d;
+  color: aqua;
 }
 nav ul {
   margin-right: 25px;
@@ -27,6 +27,7 @@ nav ul {
 }
 
 nav .Nav {
+  
   display: flex;
   align-items: center;
   justify-content:space-between; 
@@ -55,4 +56,64 @@ body {
 .size1 {
   width: 300px;
   height: 300px;
+}
+.bigBox {
+  width: 100%;
+  height: 500px;
+
+}
+
+.smallBox2 {
+  text-align: center;
+  /* color: beige; */
+  background-color: khaki;
+}
+.smallBox1 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTohNVxt-gsCdyE-ueL3S-emurkNAVCXAI8Uw&usqp=CAU");
+  background-size: cover;
+}
+.firstBox{
+  text-align: center;
+  background-color: darksalmon;
+  height: 376px;
+}
+.firstPic {
+  text-align: center;
+}
+.mission{
+  background-image: url('https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Colorful-Circle-Simple-Background-Image-1.jpg');
+  background-size: cover;
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 40px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.create {
+  background-image: url("https://www.welovesolo.com/wp-content/uploads/2016/11/31ufgwtz14qyr47.jpg");
 }

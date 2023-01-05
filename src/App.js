@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 import CreatePosting from './postings/New';
 import SitterPage from './pages/SitterPage';
 import Postings from './pages/Postings';
-
+import Edit from './postings/Edit'
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
         <Route path="/bookus" element={<CreatePosting />} />
         <Route path="/sitter/:index" element={<SitterPage />} />
         <Route path="/postings" element={<Postings />} />
+        {/* <Route path="/edit/:id" element={<Edit />} /> */}
       </Routes>
     </div>
   );
