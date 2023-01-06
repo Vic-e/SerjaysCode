@@ -35,6 +35,11 @@ export default function Contact() {
         <input type="text" id="message" name="message" /> <br></br>
         <input type="submit" value="Submit" />
       </form>
+
+      <br></br><br></br>
+
+      
+      <iframe src="https://giphy.com/embed/rVYbN0uxznAaI" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/babysitter-rVYbN0uxznAaI"></a></p><small>*If this happens call us!*</small>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import React from 'react';
 export default function Rates() {
   return (
     <div className="Rates">
+      <small>*These rates are pre-inflation. Rates will change on January 15, 2023 with an 200% increase.*</small>
       <h1>Our Rates</h1>
       <p>
         At <i>the Nanny Network</i>, we offer competitive rates for high-quality
